@@ -18,7 +18,9 @@ import java.util.ResourceBundle;
 
 public class SceneController implements Initializable {
 
-    /**[START]*/
+    /**
+     * [START]
+     */
     /*HomeMenu*/
     @FXML
     private Button btnKembali;
@@ -36,28 +38,30 @@ public class SceneController implements Initializable {
     private Button btnCamilan;
     /**==[END]==*/
 
-    /**[START]*/
+    /**
+     * [START]
+     */
     /*SplashScreen*/
-    @FXML private ImageView splashscreen_icon_iv;
+    @FXML
+    private ImageView splashscreen_icon_iv;
     /**==[END]==*/
 
-    /**[START]*/
-    //Initializer
+    /**
+     * [START]
+     */
+    /*Initializer*/
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         /*SPLASH SCREEN*/
         new Services().postDelayed(
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            new Services().transferScene("/com/example/ubkasirjavafx/homemenu_activity.fxml", splashscreen_icon_iv.getScene().getWindow());
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                () -> {
+                    try {
+                        new Services().transferScene("/com/example/ubkasirjavafx/homemenu_activity.fxml", splashscreen_icon_iv.getScene().getWindow());
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
                 }
-                , 2000);
+                , 1800);
     }
     /**==[END]==*/
 }
