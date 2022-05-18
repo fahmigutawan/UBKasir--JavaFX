@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="13.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../stock-vector-fast-food-seamless-background-vector-fast-food-pattern-586262732.jpg" />
+            <Image url="@res/bg_home_activity.jpg" />
          </image>
       </ImageView>
       <Button fx:id="btnMulai" layoutX="265.0" layoutY="260.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="96.0" text="MULAI">
