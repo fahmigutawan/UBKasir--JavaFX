@@ -14,4 +14,6 @@ module com.example.ubkasirjavafx {
     exports com.example.ubkasirjavafx;
     exports com.example.ubkasirjavafx.ui;
     opens com.example.ubkasirjavafx.ui to javafx.fxml;
+    exports com.example.ubkasirjavafx.controller;
+    opens com.example.ubkasirjavafx.controller to javafx.fxml;
 }
