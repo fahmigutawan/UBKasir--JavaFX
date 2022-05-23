@@ -1,6 +1,7 @@
 ## This Project
 
 This app is used to complete _Mini Project_ assignment in Object Oriented Programming lecture.
+Object Oriented Programming is one of lecture that available in Informatics Engineer major, Computer Faculty of Brawijaya University.
 
 ## Download Finished Project
 
