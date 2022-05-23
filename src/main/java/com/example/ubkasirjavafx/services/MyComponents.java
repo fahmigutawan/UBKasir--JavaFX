@@ -41,6 +41,8 @@ public class MyComponents {
         Label name = new Label();
         name.setText(nama);
         name.setAlignment(Pos.CENTER);
+        name.setMaxWidth(72);
+        name.setWrapText(true);
         picAndName.add(name, 0, 1);
 
         //Make a button
