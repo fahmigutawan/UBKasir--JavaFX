@@ -22,11 +22,11 @@ public class MyMenu {
         makanan.add(new StackPane(new MyContent("Nasi Goreng Kambing","04",17000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/nasi_goreng.png"))));
         makanan.add(new StackPane(new MyContent("Indomie Goreng","05",5000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/nasi_goreng.png"))));
         makanan.add(new StackPane(new MyContent("Indomie Kuah","06",5000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/nasi_goreng.png"))));
-        makanan.add(new StackPane(new MyContent("Nasi Chili Beef","07",15000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/dummy_food.png"))));
-        makanan.add(new StackPane(new MyContent("Nasi Chili Chicken","08",15000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/dummy_food.png"))));
-        makanan.add(new StackPane(new MyContent("Nasi Kulit Sambal Matah","09",17000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/dummy_food.png"))));
-        makanan.add(new StackPane(new MyContent("Nasi Ayam Geprek","10",14000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/dummy_food.png"))));
-        makanan.add(new StackPane(new MyContent("Nasi Ayam Penyet","11",14000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/dummy_food.png"))));
+        makanan.add(new StackPane(new MyContent("Nasi Chili Beef","07",15000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/nasi_ayam.png"))));
+        makanan.add(new StackPane(new MyContent("Nasi Chili Chicken","08",15000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/nasi_ayam.png"))));
+        makanan.add(new StackPane(new MyContent("Nasi Kulit Sambal Matah","09",17000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/nasi_ayam.png"))));
+        makanan.add(new StackPane(new MyContent("Nasi Ayam Geprek","10",14000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/nasi_ayam.png"))));
+        makanan.add(new StackPane(new MyContent("Nasi Ayam Penyet","11",14000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/nasi_ayam.png"))));
 
         //Instansiasi Objek Minuman
         minuman.add(new StackPane(new MyContent("Caffe Latte","01",10000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/kopi.png"))));
@@ -34,10 +34,10 @@ public class MyMenu {
         minuman.add(new StackPane(new MyContent("Caramel Latte","03",12000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/kopi.png"))));
         minuman.add(new StackPane(new MyContent("Moccachino","04",10000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/kopi.png"))));
         minuman.add(new StackPane(new MyContent("Black Coffe","05",7000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/kopi.png"))));
-        minuman.add(new StackPane(new MyContent("Susu Strawberry","06",10000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/dummy_drink.png"))));
-        minuman.add(new StackPane(new MyContent("Susu Mint","07",10000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/dummy_drink.png"))));
-        minuman.add(new StackPane(new MyContent("Susu Almond","08",10000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/dummy_drink.png"))));
-        minuman.add(new StackPane(new MyContent("Soda Gembira","09",12000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/minuman.png"))));
+        minuman.add(new StackPane(new MyContent("Susu Strawberry","06",10000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/susu.png"))));
+        minuman.add(new StackPane(new MyContent("Susu Mint","07",10000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/susu.png"))));
+        minuman.add(new StackPane(new MyContent("Susu Almond","08",10000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/susu.png"))));
+        minuman.add(new StackPane(new MyContent("Soda Gembira","09",12000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/susu.png"))));
         minuman.add(new StackPane(new MyContent("Teh Tarik","10",8000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/teh.png"))));
         minuman.add(new StackPane(new MyContent("Es Teh Tawar","11",2000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/teh.png"))));
         minuman.add(new StackPane(new MyContent("Teh Tawar","12",2000,listView, textField).build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/food/teh.png"))));
