@@ -13,61 +13,48 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0"
-           prefWidth="911.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="com.example.ubkasirjavafx.controller.HomeMenuController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ubkasirjavafx.controller.HomeMenuController">
     <children>
         <ImageView pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
             <image>
-                <Image url="@res/bg_main_activity.jpg"/>
+                <Image url="@res/bg_main_activity.jpg" />
             </image>
         </ImageView>
         <AnchorPane prefHeight="600.0" prefWidth="800.0">
             <children>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c2c2c2bf" height="38.0" opacity="0.75"
-                           stroke="TRANSPARENT" strokeType="INSIDE" width="533.0"/>
-                <Button fx:id="btnKembali" layoutX="7.0" layoutY="4.0" mnemonicParsing="false" prefHeight="29.0"
-                        prefWidth="67.0" text="Kembali"/>
-                <ScrollPane fitToWidth="true" layoutX="559.0" layoutY="18.0" prefHeight="457.0" prefWidth="227.0" maxWidth="227.0">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c2c2c2bf" height="38.0" opacity="0.75" stroke="TRANSPARENT" strokeType="INSIDE" width="533.0" />
+                <Button fx:id="btnKembali" layoutX="7.0" layoutY="4.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="67.0" text="Kembali" />
+                <ScrollPane fitToWidth="true" layoutX="559.0" layoutY="18.0" maxWidth="227.0" prefHeight="457.0" prefWidth="227.0">
                     <content>
-                        <ListView fx:id="listPesanan" prefHeight="457.0" prefWidth="227.0"/>
+                        <ListView fx:id="listPesanan" prefHeight="457.0" prefWidth="227.0" />
                     </content>
                 </ScrollPane>
-                <TextField fx:id="textTotal" editable="false" layoutX="637.0" layoutY="475.0" prefHeight="50.0"
-                           prefWidth="149.0"/>
-                <Button fx:id="btnCetak" layoutX="559.0" layoutY="538.0" mnemonicParsing="false" prefHeight="36.0"
-                        prefWidth="227.0" text="Cetak Pesanan">
+                <TextField fx:id="textTotal" editable="false" layoutX="637.0" layoutY="475.0" prefHeight="50.0" prefWidth="149.0" />
+                <Button fx:id="btnBayar" layoutX="559.0" layoutY="538.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="227.0" text="Bayar">
                     <font>
-                        <Font name="System Bold" size="17.0"/>
+                        <Font name="System Bold" size="17.0" />
                     </font>
                 </Button>
-                <TextField editable="false" layoutX="559.0" layoutY="475.0" prefHeight="50.0" prefWidth="80.0"
-                           text="Total">
+                <TextField editable="false" layoutX="559.0" layoutY="475.0" prefHeight="50.0" prefWidth="80.0" text="Total">
                     <font>
-                        <Font size="21.0"/>
+                        <Font size="21.0" />
                     </font>
                 </TextField>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" height="106.0" layoutX="9.0" layoutY="56.0" opacity="0.7"
-                           stroke="BLACK" strokeType="INSIDE" width="324.0"/>
-                <Button fx:id="btnMakanan" layoutX="22.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0"
-                        prefWidth="74.0" text="Makanan"/>
-                <Button fx:id="btnMinuman" layoutX="134.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0"
-                        prefWidth="74.0" text="Minuman"/>
-                <Button fx:id="btnCamilan" layoutX="239.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0"
-                        prefWidth="80.0" text="Camilan"/>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="106.0" layoutX="9.0" layoutY="56.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" width="324.0" />
+                <Button fx:id="btnMakanan" layoutX="22.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="74.0" text="Makanan" />
+                <Button fx:id="btnMinuman" layoutX="134.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="74.0" text="Minuman" />
+                <Button fx:id="btnCamilan" layoutX="239.0" layoutY="116.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="80.0" text="Camilan" />
                 <Label layoutX="22.0" layoutY="65.0" prefHeight="38.0" prefWidth="263.0" text="Menu" textFill="WHITE">
                     <font>
-                        <Font size="24.0"/>
+                        <Font size="24.0" />
                     </font>
                 </Label>
                 <StackPane layoutX="9.0" layoutY="182.0" prefHeight="396.0" prefWidth="524.0">
                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="396.0" stroke="BLACK"
-                                   strokeType="INSIDE" width="536.0"/>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="396.0" stroke="BLACK" strokeType="INSIDE" width="536.0" />
                         <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
                             <content>
-                                        <GridPane fx:id="contentTable" alignment="CENTER" minHeight="-Infinity"
-                                                  minWidth="-Infinity" prefWidth="497.0">
+                                        <GridPane fx:id="contentTable" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefWidth="497.0">
 
                                         </GridPane>
                             </content>

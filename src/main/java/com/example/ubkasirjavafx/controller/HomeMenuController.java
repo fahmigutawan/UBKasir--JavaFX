@@ -14,6 +14,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
 
 import java.io.IOException;
 import java.net.URL;
@@ -21,14 +22,14 @@ import java.util.ResourceBundle;
 
 public class HomeMenuController implements Initializable {
 
-    MyMenu mymenu;
+    private MyMenu mymenu;
 
     @FXML
     private Button btnKembali;
     @FXML
     private TextField textTotal;
     @FXML
-    private Button btnCetak;
+    private Button btnBayar;
     @FXML
     private Button btnMakanan;
     @FXML
@@ -44,6 +45,7 @@ public class HomeMenuController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         mymenu = new MyMenu(listPesanan, textTotal);
+        textTotal.setFont(Font.font(24));
         textTotal.setText("0");
 
         // Define Kembali Button Action
@@ -83,6 +85,21 @@ public class HomeMenuController implements Initializable {
             }
         });
 
+        btnBayar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                new Services().postDelayed(
+                        () -> {
+                            try {
+                                new Services().transferScene("/com/example/ubkasirjavafx/windowbayar_activity.fxml", btnKembali.getScene().getWindow());
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        , 0);
+            }
+        });
+
         // Call default Preview (Makanan preview)
         contentTable.setHgap(32);
         contentTable.setVgap(16);
@@ -95,25 +112,48 @@ public class HomeMenuController implements Initializable {
     void setPreviewMakanan() {
         contentTable.getChildren().clear();
 
+        //Menampilkan Menu
+        int x = 0, y = 0;
 
-
-//        mymenu.makanan.forEach((n) -> contentTable.add(n,0,0));
-        contentTable.add(mymenu.makanan.get(0),0,0);
-        contentTable.add(mymenu.makanan.get(1),1,0);
+        for (StackPane i : mymenu.makanan) {
+            contentTable.add(i, x++, y);
+            if (x == 5) {
+                x = 0;
+                y++;
+            }
+        }
 
     }
 
     void setPreviewMinuman() {
         contentTable.getChildren().clear();
 
-        mymenu.minuman.forEach((n) -> contentTable.add(n,0,0));
+        //Menampilkan Menu
+        int x = 0, y = 0;
+
+        for (StackPane i : mymenu.minuman) {
+            contentTable.add(i, x++, y);
+            if (x == 5) {
+                x = 0;
+                y++;
+            }
+        }
 
     }
 
     void setPreviewSnack() {
         contentTable.getChildren().clear();
 
-        mymenu.camilan.forEach((n) -> contentTable.add(n,0,0));
+        //Menampilkan Menu
+        int x = 0, y = 0;
+
+        for (StackPane i : mymenu.camilan) {
+            contentTable.add(i, x++, y);
+            if (x == 5) {
+                x = 0;
+                y++;
+            }
+        }
 
     }
 }

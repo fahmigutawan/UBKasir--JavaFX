@@ -13,17 +13,17 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ubkasirjavafx.controller.WindowBayarController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="343.0" layoutY="38.0" stroke="BLACK" strokeType="INSIDE" width="490.0" />
-      <ImageView fitHeight="250.0" fitWidth="361.0" layoutX="121.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="618.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <ImageView fitHeight="358.0" fitWidth="381.0" layoutX="222.0" layoutY="130.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@res/icon_app.png" />
          </image>
       </ImageView>
-      <BorderPane layoutX="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="479.0">
+      <BorderPane layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="800.0">
          <center>
-            <VBox prefHeight="303.0" prefWidth="496.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="303.0" prefWidth="741.0" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets top="10.0" />
                </BorderPane.margin>
@@ -35,7 +35,7 @@
                   </Text>
                   <HBox>
                      <children>
-                        <TextField prefHeight="27.0" prefWidth="218.0">
+                        <TextField fx:id="txtTotal" editable="false" prefHeight="27.0" prefWidth="218.0">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -50,9 +50,9 @@
                         <Insets bottom="5.0" left="30.0" top="20.0" />
                      </VBox.margin>
                   </Text>
-                  <HBox prefHeight="27.0" prefWidth="494.0">
+                  <HBox prefHeight="27.0" prefWidth="800.0">
                      <children>
-                        <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="218.0">
+                        <TextField fx:id="txtPembayaran" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="218.0">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -69,7 +69,7 @@
                   </Text>
                   <HBox>
                      <children>
-                        <TextField prefHeight="27.0" prefWidth="218.0">
+                        <TextField fx:id="txtKembalian" editable="false" prefHeight="27.0" prefWidth="218.0">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -87,22 +87,22 @@
                <children>
                   <AnchorPane prefHeight="22.0" prefWidth="471.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4c5c7" height="39.0" layoutX="-8.0" stroke="BLACK" strokeType="INSIDE" width="490.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4c5c7" height="39.0" layoutX="-18.0" stroke="BLACK" strokeType="INSIDE" width="825.0" />
                      </children>
                   </AnchorPane>
                </children>
             </HBox>
          </top>
          <bottom>
-            <HBox prefHeight="66.0" prefWidth="479.0" BorderPane.alignment="CENTER">
+            <HBox prefHeight="66.0" prefWidth="613.0" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="btnBayar" mnemonicParsing="false" prefHeight="43.0" prefWidth="113.0" text="Bayar">
                      <HBox.margin>
                         <Insets bottom="20.0" left="30.0" />
                      </HBox.margin>
                   </Button>
-                  <Region prefHeight="46.0" prefWidth="194.0" />
-                  <Button fx:id="BtnPesananBaru" mnemonicParsing="false" prefHeight="43.0" prefWidth="106.0" text="Pesanan Baru">
+                  <Region prefHeight="66.0" prefWidth="33.0" />
+                  <Button fx:id="btnPesananBaru" mnemonicParsing="false" prefHeight="43.0" prefWidth="110.0" text="Pesanan Baru">
                      <HBox.margin>
                         <Insets bottom="20.0" left="10.0" />
                      </HBox.margin>

@@ -10,12 +10,19 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
 
 import java.io.InputStream;
 
 public class MyContent {
-    String nama, id, recentTotalBayar;
-    int price, jumlahItem;
+    private String nama, id, recentTotalBayar;
+    private int price, jumlahItem;
+    private static int totalBayar;
+
+    //Getter total
+    public static int getTotalBayar() {
+        return totalBayar;
+    }
 
     //Other attribute
     ListView listView;
@@ -88,7 +95,7 @@ public class MyContent {
 
     private void decreaseTotal() {
         if (jumlahItem > 0) jumlahItemLbl.setText(Integer.toString(--jumlahItem));
-        System.out.println(jumlahItem);
+
         if (jumlahItem == 0) {
             listView.getItems().remove(gp);
             gp.getChildren().clear();
@@ -145,6 +152,7 @@ public class MyContent {
         int tmp = 0;
         if(calculatePesanan.equals(CalculatePesanan.PLUS)) tmp =(Integer.parseInt(recentTotalBayar) + price);
         else tmp = (Integer.parseInt(recentTotalBayar) - price);
+        totalBayar = tmp;
         recentTotalBayar = String.format("%d", tmp);
         totalBayarField.setText(recentTotalBayar);
     }
