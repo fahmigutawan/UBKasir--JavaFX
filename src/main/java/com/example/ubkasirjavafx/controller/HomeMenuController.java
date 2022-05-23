@@ -37,14 +37,14 @@ public class HomeMenuController implements Initializable {
     private Button btnCamilan;
     @FXML
     private GridPane contentTable;
-
     @FXML
     private ListView listPesanan;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        mymenu = new MyMenu(listPesanan);
+        mymenu = new MyMenu(listPesanan, textTotal);
+        textTotal.setText("0");
 
         // Define Kembali Button Action
         btnKembali.setOnAction(new EventHandler<ActionEvent>() {
@@ -100,8 +100,6 @@ public class HomeMenuController implements Initializable {
 //        mymenu.makanan.forEach((n) -> contentTable.add(n,0,0));
         contentTable.add(mymenu.makanan.get(0),0,0);
         contentTable.add(mymenu.makanan.get(1),1,0);
-
-
 
     }
 
