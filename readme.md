@@ -1,5 +1,7 @@
 ## This Project
 
+This app is used to complete _Mini Project_ assignment in Object Oriented Programming lecture.
+
 ## Download Finished Project
 
 This app has not published yet
