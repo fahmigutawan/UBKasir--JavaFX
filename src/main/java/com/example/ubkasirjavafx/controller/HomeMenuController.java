@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
 
 import java.io.IOException;
 import java.net.URL;
@@ -86,21 +87,35 @@ public class HomeMenuController implements Initializable {
         contentTable.setHgap(32);
         contentTable.setVgap(16);
         contentTable.setPadding(new Insets(16, 16, 16, 16));
-        contentTable.setAlignment(Pos.BASELINE_CENTER);
+        contentTable.setAlignment(Pos.BASELINE_LEFT);
 
         setPreviewMakanan();
     }
 
     void setPreviewMakanan() {
         contentTable.getChildren().clear();
-        contentTable.add(mymenu.makanan[0].build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/dummy_food.png")),0,0);
+
+
+
+//        mymenu.makanan.forEach((n) -> contentTable.add(n,0,0));
+        contentTable.add(mymenu.makanan.get(0),0,0);
+        contentTable.add(mymenu.makanan.get(1),1,0);
+
+
+
     }
 
     void setPreviewMinuman() {
         contentTable.getChildren().clear();
+
+        mymenu.minuman.forEach((n) -> contentTable.add(n,0,0));
+
     }
 
     void setPreviewSnack() {
         contentTable.getChildren().clear();
+
+        mymenu.camilan.forEach((n) -> contentTable.add(n,0,0));
+
     }
 }

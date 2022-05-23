@@ -87,7 +87,16 @@ public class MyContent {
     }
 
     private void addTotal() {
-        if(total>0) totalLbl.setText(Integer.toString(++total));
+        if (total>0) totalLbl.setText(Integer.toString(++total));
+    }
+
+    private void removeTotal() {
+        if (total>0) totalLbl.setText(Integer.toString(--total));
+        System.out.println(total);
+        if (total == 0) {
+            listView.getItems().remove(gp);
+            gp.getChildren().clear();
+        }
     }
 
     private void addPesanan() {
@@ -100,6 +109,23 @@ public class MyContent {
         removeBtn.setText("-");
         totalLbl.setWrapText(true);
         gp.setHgap(16);
+
+        //Add Button action
+        addBtn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                addTotal();
+            }
+        });
+
+        //Remove Button action
+        removeBtn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                removeTotal();
+            }
+        });
+
 
         info.setText(String.format("%s (Rp. %d)", nama, price));
         gp.add(info, 0, 0);
