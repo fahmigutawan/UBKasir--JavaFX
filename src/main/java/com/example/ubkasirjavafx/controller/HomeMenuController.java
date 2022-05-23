@@ -1,6 +1,7 @@
 package com.example.ubkasirjavafx.controller;
 
 import com.example.ubkasirjavafx.services.MyContent;
+import com.example.ubkasirjavafx.services.MyMenu;
 import com.example.ubkasirjavafx.services.Services;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -18,6 +19,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class HomeMenuController implements Initializable {
+
+    MyMenu mymenu;
 
     @FXML
     private Button btnKembali;
@@ -39,6 +42,8 @@ public class HomeMenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        mymenu = new MyMenu(listPesanan);
 
         // Define Kembali Button Action
         btnKembali.setOnAction(new EventHandler<ActionEvent>() {
@@ -88,6 +93,7 @@ public class HomeMenuController implements Initializable {
 
     void setPreviewMakanan() {
         contentTable.getChildren().clear();
+        contentTable.add(mymenu.makanan[0].build(getClass().getResourceAsStream("/com/example/ubkasirjavafx/res/dummy_food.png")),0,0);
     }
 
     void setPreviewMinuman() {
